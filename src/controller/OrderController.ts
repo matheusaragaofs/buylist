@@ -3,11 +3,11 @@ import {Request, Response} from 'express'
 import Order from '../entity/Order'
 import Products from '../entity/Product'
 
-export const showOrder = async (request,response:Response)=>{
+export const showOrders = async (request,response:Response)=>{
     const { page } = request.query
     const result = await getRepository(Order).find({
-        take:1,
-        skip: 1 * page
+        take:4,
+        skip: 4 * page
 
     })
     try {
@@ -17,6 +17,23 @@ export const showOrder = async (request,response:Response)=>{
         console.error
     }
 }
+
+export const showOrder = async (request:Request, response:Response)=>{
+    const { id } = request.params
+    const orderRepo = await getRepository(Order)
+    const order = await orderRepo.find({where:{
+        id
+    }})
+
+    try {
+        return response.status(200).json(order)
+    } catch {
+        console.error
+    }
+
+
+}
+
 
 export const editOrder= async (request:Request, response:Response)=>{
     const { id } = request.params
@@ -35,9 +52,11 @@ export const editOrder= async (request:Request, response:Response)=>{
 
     // Dica: Posso atualizar mais de um item através de um objeto
     await orderRepo.update(id,{amount:amount, sum_price:sum_price})
+    
     try {
     return response.status(200).json({
-         message:'Order updated successfully'
+         message:'Order updated successfully',
+         
      })
         
     } catch (error) {
@@ -55,6 +74,7 @@ export const removeOrder= async (request:Request, response:Response)=>{
         
         return response.json({
             message: "Order was removed successfully",
+            order
         })
         
     } catch (error) {
@@ -79,7 +99,8 @@ export const addOrder= async (request:Request, response:Response)=>{
         sum_price
     })
     await OrderRepository.save(order)
-    return response.status(201).json({message:"Order was added successfully"})
+    return response.status(201).json({message:"Order was added successfully",
+order})
     }catch(err){
         console.log(err)
     }

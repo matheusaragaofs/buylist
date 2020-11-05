@@ -13,11 +13,11 @@ export const addProduct = async (request: Request, response: Response) => {
     }
 }
 //Pagination
-export const showProduct = async (request,response:Response)=>{
+export const showProducts = async (request,response:Response)=>{
     const {page} = request.query
     const result = await getRepository(Product).find({
-        take:1,
-        skip: 1 * page,
+        take:4,
+        skip: 4 * page,
     })
     try {
     return response.status(201).json(result)
@@ -25,6 +25,21 @@ export const showProduct = async (request,response:Response)=>{
     } catch (error) {
         console.error        
     }
+}
+
+export const showProduct = async (request:Request,response:Response)=>{
+    const { id } = request.params
+    const productRepo = await getRepository(Product)
+    const product = await productRepo.find({where:{
+        id
+    }})
+
+    try {
+        return response.status(200).json(product)
+    } catch (error) {
+        console.error
+    }
+
 }
 
 export const removeProduct = async (request: Request, response: Response) => {
