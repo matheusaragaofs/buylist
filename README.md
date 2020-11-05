@@ -67,8 +67,8 @@ Exemplo:
 
 
 
-# /product:id [GET]
-Essa endpoint irá dar informações sobre o produto a partir do id dele.
+# /product/:id [GET]
+Essa endpoint irá dar informações sobre um produto.
 ### Parâmetros:
 **id**: number
 
@@ -76,13 +76,20 @@ Exemplo:
 `http://localhost:3000/product/2` <br>
 
 
-# /products?page [GET]
-Essa endpoint irá lista de 4 em 4 os produtos.
+# /products:page? [GET]
+Essa endpoint irá dar informações sobre vários produtos.
 ### Parâmetros:
 **page**: number
 
 Exemplo:
 `localhost:3000/products?page=0`
+
+# /amountProducts [GET]
+Essa endpoint irá mostrar quantidade de produtos cadastrados
+### Parâmetros
+**nenhum**
+
+
 
 # /product [PUT]
 Essa endpoint irá editar o produto registrado no banco de dados.
@@ -104,7 +111,7 @@ Exemplo:
 }
  ```
 
-# /product [DELETE]
+# /product/:id [DELETE]
 Essa endpoint irá deletar o produto registrado no banco de dados.
 ### Parâmetros:
 **id**: number <br>
@@ -125,3 +132,48 @@ Exemplo:
 	"amount": 25
 }
 ```
+
+# /order [GET]
+Essa endpoint irá dar informações sobre um pedido.
+### Parâmetros
+**id**: number <br>
+
+Exemplo:
+`localhost:3000/order/2`
+
+# /orders:page? [GET]
+Essa endpoint irá informações sobre vários pedidos
+### Parâmetros
+**page**:number <br>
+
+Exemplo:
+`http://localhost:3000/orders/?page=0`
+
+# /order/:id [PUT]
+Essa endpoint irá atualizar o pedido
+### Parâmetros
+**id**:number <br>
+**amount**:number <br>
+
+Exemplo: 
+`http://localhost:3000/order/3`
+
+```
+{
+	"amount": 40
+}
+```
+
+# /order:id [DELETE]
+Essa endpoint irá deletar o pedido.
+
+### Parâmetros
+**id**: number <br>
+
+Exemplo:
+`http://localhost:3000/order/9`
+
+
+
+
+
