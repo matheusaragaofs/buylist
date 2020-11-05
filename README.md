@@ -13,10 +13,11 @@ Você pode baixar as endpoints pré-configuradas do Insomnia. [Endpoints Buylist
 # Endpoints
 
 # /users
-Essa endpoint irá cadastrar o usuário para que ele receba o token futuramente.
+## Metodo: POST
+Essa endpoint irá cadastrar o usuário.
 ### Parâmetros:
 *email* : string <br>
-*password*: string
+*password*: string <br>
 Exemplo:
 ```
 {
@@ -24,3 +25,19 @@ Exemplo:
 	"password": "123"
 }
 ```
+
+# /auth
+## Metodo: POST
+Essa endpoint irá autenticar o usuário cadastado para que ele receba o token.
+### Parâmetros:
+*email* : string <br>
+*password*: string <br>
+Exemplo:
+```
+{
+	"email": "matheus@gmail.com",
+	"password": "123"
+}
+```
+
+
