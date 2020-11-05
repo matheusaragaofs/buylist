@@ -48,14 +48,14 @@ Essa endopoint irá listar o produto a partir do id dele.
 id: number
 
 Exemplo:
-`http://localhost:3000/product/2`
+`http://localhost:3000/product/2` <bR>
 
-<br>
+
  # /product [POST]
  ### Parâmetros:
  
-**name**: string
-**price**: number
+**name**: string <br>
+**price**: number <br>
 **description**: string <br>
 **category**:  string <br>
 
