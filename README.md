@@ -12,12 +12,12 @@ Você pode baixar as endpoints pré-configuradas do Insomnia. [Endpoints Buylist
 
 # Endpoints
 
-# /users
-## Metodo: POST
+# /users [POST]
+
 Essa endpoint irá cadastrar o usuário.
 ### Parâmetros:
-*email* : string <br>
-*password*: string <br>
+**email** : string <br>
+**password**: string <br>
 Exemplo:
 ```
 {
@@ -26,12 +26,12 @@ Exemplo:
 }
 ```
 
-# /auth
-## Metodo: POST
+# /auth [POST]
+
 Essa endpoint irá autenticar o usuário cadastado para que ele receba o token.
 ### Parâmetros:
-*email* : string <br>
-*password*: string <br>
+**email** : string <br>
+**password**: string <br>
 Exemplo:
 ```
 {
@@ -40,4 +40,19 @@ Exemplo:
 }
 ```
 
+# /product [GET]
+### Parâmetros:
+**name**: string
+**price**: number
+**description**: string
+**category**:  string
+Exemplo:
 
+ ```
+ {
+	"name": "Buzz Lightyear",
+	"price": 130,
+	"description": "To infinity and beyond",
+	"category": "toy"
+}
+ ```
