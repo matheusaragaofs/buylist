@@ -18,6 +18,7 @@ Essa endpoint irá cadastrar o usuário.
 ### Parâmetros:
 **email** : string <br>
 **password**: string <br>
+
 Exemplo:
 ```
 {
@@ -32,6 +33,7 @@ Essa endpoint irá autenticar o usuário cadastado para que ele receba o token.
 ### Parâmetros:
 **email** : string <br>
 **password**: string <br>
+
 Exemplo:
 ```
 {
@@ -40,12 +42,24 @@ Exemplo:
 }
 ```
 
-# /product [GET]
+# /product:id [GET]
 ### Parâmetros:
+id: number
+
+
+Exemplo:
+
+<img src = "https://prnt.sc/ve850j">
+ 
+ #/product [POST]
+ Requisição via: Body/JSON
+ ### Parâmetros:
+ 
 **name**: string
 **price**: number
-**description**: string
-**category**:  string
+**description**: string <br>
+**category**:  string <br>
+
 Exemplo:
 
  ```
