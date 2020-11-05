@@ -43,15 +43,15 @@ Exemplo:
 ```
 
 # /product:id [GET]
+Essa endopoint irá listar o produto a partir do id dele.
 ### Parâmetros:
 id: number
 
 Exemplo:
 `http://localhost:3000/product/2`
 
- 
- #/product [POST]
- Requisição via: Body/JSON
+<br>
+ # /product [POST]
  ### Parâmetros:
  
 **name**: string
