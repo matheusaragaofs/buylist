@@ -15,7 +15,7 @@ Você pode baixar as endpoints pré-configuradas do Insomnia. [Endpoints Buylist
 # /users
 Essa endpoint irá cadastrar o usuário para que ele receba o token futuramente.
 ### Parâmetros:
-email : string
+email : string,
 password: string
 Exemplo:
 ```
