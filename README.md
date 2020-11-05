@@ -49,7 +49,8 @@ id: number
 
 Exemplo:
 
-<img src = "https://prnt.sc/ve850j">
+![](https://prnt.sc/ve850j, alt ='get')
+
  
  #/product [POST]
  Requisição via: Body/JSON
