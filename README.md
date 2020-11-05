@@ -164,7 +164,7 @@ Exemplo:
 }
 ```
 
-# /order:id [DELETE]
+# /order/:id [DELETE]
 Essa endpoint irá deletar o pedido.
 
 ### Parâmetros
