@@ -1,4 +1,4 @@
-# Projeto Buylist
+# Projeto API Buylist
 
 Primeiros passos:
 
