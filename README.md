@@ -1,7 +1,14 @@
-# Awesome Project Build with TypeORM
+# Projeto Buylist
 
-Steps to run this project:
+Primeiros passos:
 
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
+1. Execute o comando  `npm i` ou `npm install` 
+2. Configure as configurações do seu banco de dados no arquivo `ormconfig.json`
+3. Execute o comando `npm run typeorm migration:run`
+4. Execute o comando `npm start`
+
+Você pode baixar as endpoints pré-configuradas do Insomnia
+##Esse projeto foi feito para avaliação. [Endpoints, Insomnia ](https://drive.google.com/drive/folders/1qfRBu14ErFbmdrSIPl64pg9RTW15X6N_?usp=sharing)
+#Endpoints
+
+http://localhost:3000/users
