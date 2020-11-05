@@ -8,7 +8,8 @@ Primeiros passos:
 4. Execute o comando `npm start`
 
 Você pode baixar as endpoints pré-configuradas do Insomnia
-##Esse projeto foi feito para avaliação. [Endpoints, Insomnia ](https://drive.google.com/drive/folders/1qfRBu14ErFbmdrSIPl64pg9RTW15X6N_?usp=sharing)
-#Endpoints
+## Esse projeto foi feito para avaliação. [Endpoints Buylist, Insomnia ](https://drive.google.com/drive/folders/1qfRBu14ErFbmdrSIPl64pg9RTW15X6N_?usp=sharing)
+
+# Endpoint
 
 http://localhost:3000/users
