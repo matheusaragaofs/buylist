@@ -7,9 +7,20 @@ Primeiros passos:
 3. Execute o comando `npm run typeorm migration:run`
 4. Execute o comando `npm start`
 
-Você pode baixar as endpoints pré-configuradas do Insomnia
-## Esse projeto foi feito para avaliação. [Endpoints Buylist, Insomnia ](https://drive.google.com/drive/folders/1qfRBu14ErFbmdrSIPl64pg9RTW15X6N_?usp=sharing)
+Você pode baixar as endpoints pré-configuradas do Insomnia. [Endpoints Buylist, Insomnia ](https://drive.google.com/drive/folders/1qfRBu14ErFbmdrSIPl64pg9RTW15X6N_?usp=sharing)
+## Esse projeto foi feito para avaliação.
 
-# Endpoint
+# Endpoints
 
-http://localhost:3000/users
+### /users
+Essa endpoint irá cadastrar o usuário para que ele receba o token futuramente.
+## Parâmetros:
+### email : string
+### password: string
+Exemplo:
+```
+{
+	"email": "matheus@gmail.com",
+	"password": "123"
+}
+```
